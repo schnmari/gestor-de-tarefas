@@ -1,4 +1,4 @@
-# ✅ Gestor de Tarefas
+# Gestor de Tarefas
 
 Sistema web de gestão de tarefas do dia a dia (to-do list) feito com **PHP**, **MySQL** e **JavaScript**.
 
@@ -6,7 +6,7 @@ Sistema web de gestão de tarefas do dia a dia (to-do list) feito com **PHP**, *
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 1. Criar tarefa
 2. Editar tarefa
@@ -23,13 +23,7 @@ Sistema web de gestão de tarefas do dia a dia (to-do list) feito com **PHP**, *
 
 ---
 
-## 🛠️ Tecnologias
-
-HTML5 · CSS3 · JavaScript · PHP · MySQL · SweetAlert2
-
----
-
-## 📂 Estrutura
+## Estrutura
 
 ```text
 GestorTarefas/
@@ -42,12 +36,3 @@ GestorTarefas/
 ├── capturas_de_tela/   # Prints do sistema
 └── bancoGestorTarefas.sql
 ```
-
----
-
-## ⚙️ Como executar
-
-1. Coloque a pasta `GestorTarefas` em `htdocs` (XAMPP) e inicie o **Apache** e o **MySQL**.
-2. No **phpMyAdmin**, importe o arquivo `bancoGestorTarefas.sql`.
-3. Se precisar, ajuste usuário, senha e porta em `php/conexao.php`.
-4. Acesse: `http://localhost/GestorTarefas/`
