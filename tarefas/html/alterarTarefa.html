@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../assets/icon-logo.svg">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/formTarefa.css">
+    <title>Editar tarefa</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo"><img src="../../assets/icon-logo.svg" alt="" class="icone-logo">Minhas Tarefas</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="ativo">Tarefas</a></li>
+                <li><a href="novaTarefa.html">Nova tarefa</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container container-formulario">
+        <a href="index.html" class="voltar">&larr; Voltar para as tarefas</a>
+
+        <section class="card card-formulario">
+            <h1>Editar tarefa</h1>
+            <p class="subtitulo" id="subtitulo-formulario">Carregando tarefa...</p>
+
+            <form id="form-tarefa" novalidate>
+                <div class="campo">
+                    <label for="titulo">Título <span class="obrigatorio">*</span></label>
+                    <input type="text" id="titulo" maxlength="150" placeholder="Ex.: Lavar a louça">
+                    <span class="erro-campo" id="erro-titulo"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="descricao">Descrição</label>
+                    <textarea id="descricao" rows="3" maxlength="1000" placeholder="Detalhes da tarefa (opcional)"></textarea>
+                    <span class="erro-campo" id="erro-descricao"></span>
+                </div>
+
+                <div class="grade">
+                    <!-- Func. 6 -->
+                    <div class="campo">
+                        <label for="prioridade">Prioridade</label>
+                        <select id="prioridade">
+                            <option value="alta">Alta</option>
+                            <option value="media" selected>Média</option>
+                            <option value="baixa">Baixa</option>
+                        </select>
+                        <span class="erro-campo" id="erro-prioridade"></span>
+                    </div>
+
+                    <!-- Func. 4 -->
+                    <div class="campo">
+                        <label for="status">Status</label>
+                        <select id="status">
+                            <option value="pendente" selected>Pendente</option>
+                            <option value="em_andamento">Em andamento</option>
+                            <option value="concluida">Concluída</option>
+                        </select>
+                        <span class="erro-campo" id="erro-status"></span>
+                    </div>
+
+                    <!-- Func. 10 -->
+                    <div class="campo">
+                        <label for="data_expiracao">Data de expiração</label>
+                        <input type="date" id="data_expiracao">
+                        <span class="erro-campo" id="erro-data_expiracao"></span>
+                    </div>
+
+                    <!-- Func. 8 -->
+                    <div class="campo">
+                        <div class="label-com-acao">
+                            <label for="categoria">Categoria</label>
+                            <button type="button" id="btn-nova-categoria" class="botao-link">+ Nova categoria</button>
+                        </div>
+                        <select id="categoria">
+                            <option value="">Sem categoria</option>
+                        </select>
+                        <span class="erro-campo" id="erro-categoria_id"></span>
+                    </div>
+                </div>
+
+                <div id="caixa-nova-categoria" class="caixa-nova-categoria" hidden>
+                    <label for="nova-categoria-nome">Nome da nova categoria</label>
+                    <div class="linha-nova-categoria">
+                        <input type="text" id="nova-categoria-nome" maxlength="50" placeholder="Ex.: Academia">
+                        <button type="button" id="btn-salvar-categoria" class="botao botao-primario botao-pequeno">Salvar</button>
+                        <button type="button" id="btn-cancelar-categoria" class="botao botao-secundario botao-pequeno">Cancelar</button>
+                    </div>
+                    <span class="erro-campo" id="erro-nome"></span>
+                </div>
+
+                <!-- Func. 12 -->
+                <label class="opcao-favorita">
+                    <input type="checkbox" id="favorita">
+                    <span class="estrela">★</span>
+                    <span>Marcar como favorita <small>(fica no topo da lista)</small></span>
+                </label>
+
+                <div class="acoes-formulario">
+                    <a href="index.html" class="botao botao-secundario">Cancelar</a>
+                    <button type="submit" id="btn-salvar" class="botao botao-primario">Salvar alterações</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../javascript/regras.js"></script>
+    <script src="../../javascript/requisicao.js"></script>
+    <script src="../../javascript/alertas.js"></script>
+    <script src="../../javascript/formularioTarefa.js"></script>
+    <script src="../../categorias/javascript/categorias.js"></script>
+    <script src="../javascript/alterarTarefa.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+/* ==========================================================
+   formTarefa.css — telas novaTarefa.html e alterarTarefa.html
+   ========================================================== */
+
+.container-formulario {
+    max-width: 680px;
+}
+
+.voltar {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--cor-texto-suave);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.voltar:hover {
+    color: var(--cor-primaria);
+}
+
+.card-formulario {
+    padding: 2rem;
+}
+
+.card-formulario h1 {
+    font-size: 1.5rem;
+}
+
+.subtitulo {
+    color: var(--cor-texto-suave);
+    margin: 4px 0 1.5rem;
+    font-size: 0.95rem;
+}
+
+.campo {
+    margin-bottom: 6px;
+}
+
+.campo label,
+.caixa-nova-categoria label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.obrigatorio {
+    color: var(--cor-alta);
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+}
+
+.label-com-acao {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.label-com-acao .botao-link {
+    padding: 0;
+    font-size: 0.82rem;
+}
+
+/* caixa de nova categoria (Func. 8) */
+.caixa-nova-categoria {
+    margin: 4px 0 14px;
+    padding: 14px;
+    border-radius: var(--raio-pequeno);
+    background-color: var(--cor-primaria-clara);
+    border: 1px dashed #c9c3f7;
+}
+
+.linha-nova-categoria {
+    display: flex;
+    gap: 8px;
+}
+
+.linha-nova-categoria input {
+    flex: 1;
+}
+
+/* favorita (Func. 12) */
+.opcao-favorita {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 6px 0 4px;
+    padding: 12px 14px;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-pequeno);
+    font-size: 0.92rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transicao);
+}
+
+.opcao-favorita small {
+    color: var(--cor-texto-suave);
+    font-weight: 400;
+}
+
+.opcao-favorita input {
+    position: absolute;
+    opacity: 0;
+}
+
+.opcao-favorita .estrela {
+    font-size: 1.35rem;
+    line-height: 1;
+    color: #c9cbd8;
+    transition: var(--transicao);
+}
+
+.opcao-favorita:has(input:checked) {
+    background-color: #fffaeb;
+    border-color: #f6e2a6;
+}
+
+.opcao-favorita input:checked + .estrela {
+    color: var(--cor-favorita);
+    transform: scale(1.15);
+}
+
+.opcao-favorita input:focus-visible + .estrela {
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.acoes-formulario {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--cor-borda);
+}
+
+@media (max-width: 600px) {
+    .card-formulario {
+        padding: 1.25rem;
+    }
+
+    .grade {
+        grid-template-columns: 1fr;
+    }
+
+    .acoes-formulario .botao {
+        flex: 1;
+    }
+}

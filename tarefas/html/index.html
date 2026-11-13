@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../assets/icon-logo.svg">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/tarefas.css">
+    <title>Minhas Tarefas</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo"><img src="../../assets/icon-logo.svg" alt="" class="icone-logo">Minhas Tarefas</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="ativo">Tarefas</a></li>
+                <li><a href="novaTarefa.html">Nova tarefa</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="cabecalho-pagina">
+            <div>
+                <p class="data-hoje" id="data-hoje"></p>
+                <h1>Suas tarefas do dia</h1>
+            </div>
+            <a href="novaTarefa.html" class="botao botao-primario" id="btn-nova-tarefa">
+                <img src="../../assets/icon-mais.svg" alt=""> Nova tarefa
+            </a>
+        </header>
+
+        <!-- Func. 11: Contador / barra de progresso -->
+        <section class="card card-progresso">
+            <div class="progresso-topo">
+                <div>
+                    <h2>Seu progresso</h2>
+                    <p id="texto-progresso">0 de 0 tarefas concluídas</p>
+                </div>
+                <span class="progresso-percentual" id="percentual-progresso">0%</span>
+            </div>
+            <progress id="barra-progresso" value="0" max="100"></progress>
+            <div class="progresso-numeros">
+                <div><strong id="num-total">0</strong><span>Total</span></div>
+                <div><strong id="num-concluidas">0</strong><span>Concluídas</span></div>
+                <div><strong id="num-restantes">0</strong><span>Restantes</span></div>
+            </div>
+        </section>
+
+        <!-- Func. 5, 7, 9 e 10: Busca, filtros e ordenação -->
+        <section class="card card-filtros">
+            <div class="campo-busca">
+                <img src="../../assets/icon-busca.svg" alt="">
+                <input type="search" id="busca" placeholder="Buscar por título ou descrição...">
+            </div>
+
+            <div class="filtro-status">
+                <label class="chip"><input type="radio" name="filtroStatus" value="todos" checked><span>Todas</span></label>
+                <label class="chip"><input type="radio" name="filtroStatus" value="pendente"><span>Pendentes</span></label>
+                <label class="chip"><input type="radio" name="filtroStatus" value="em_andamento"><span>Em andamento</span></label>
+                <label class="chip"><input type="radio" name="filtroStatus" value="concluida"><span>Concluídas</span></label>
+            </div>
+
+            <div class="filtros-linha">
+                <label class="filtro-select">
+                    <span>Prioridade</span>
+                    <select id="filtro-prioridade">
+                        <option value="todas">Todas</option>
+                        <option value="alta">Alta</option>
+                        <option value="media">Média</option>
+                        <option value="baixa">Baixa</option>
+                    </select>
+                </label>
+
+                <label class="filtro-select">
+                    <span>Ordenar por</span>
+                    <select id="ordenacao">
+                        <option value="padrao">Mais recentes</option>
+                        <option value="expiracao_asc">Expiração mais próxima</option>
+                        <option value="expiracao_desc">Expiração mais distante</option>
+                    </select>
+                </label>
+
+                <button type="button" id="btn-limpar-filtros" class="botao-link">Limpar filtros</button>
+            </div>
+        </section>
+
+        <!-- Lista de tarefas -->
+        <section>
+            <h2 class="titulo-lista">Tarefas <span class="contador" id="contador-visiveis">0</span></h2>
+
+            <div id="lista-tarefas" class="lista-tarefas"></div>
+
+            <div id="mensagem-vazia" class="vazio" hidden>
+                <img src="../../assets/icon-vazio.svg" alt="">
+                <p id="texto-vazio">Nenhuma tarefa encontrada.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../javascript/regras.js"></script>
+    <script src="../../javascript/requisicao.js"></script>
+    <script src="../../javascript/alertas.js"></script>
+    <script src="../javascript/acoesTarefa.js"></script>
+    <script src="../javascript/getTarefas.js"></script>
+</body>
+</html>
