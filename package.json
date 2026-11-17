@@ -4,7 +4,13 @@
   "description": "Sistema web de gestão de tarefas do dia a dia (to-do list) feito com **PHP**, **MySQL** e **JavaScript**.",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js"
+    "test": "cucumber-js",
+    "test:mariana": "cucumber-js -p mariana",
+    "test:yasmin": "cucumber-js -p yasmin",
+    "test:gabriela": "cucumber-js -p gabriela",
+    "test:joao": "cucumber-js -p joao",
+    "test:heitor": "cucumber-js -p heitor",
+    "test:josue": "cucumber-js -p josue"
   },
   "repository": {
     "type": "git",
