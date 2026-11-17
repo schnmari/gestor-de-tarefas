@@ -42,7 +42,9 @@ const Regras = (function () {
             erros.titulo = 'O título deve ter no máximo ' + TITULO_MAX + ' caracteres.';
         }
 
-        if (dados && dados.prioridade && !Object.prototype.hasOwnProperty.call(PRIORIDADES, dados.prioridade)) {
+        if (!dados || !dados.prioridade) {
+            erros.prioridade = 'A prioridade é obrigatória.';
+        } else if (!Object.prototype.hasOwnProperty.call(PRIORIDADES, dados.prioridade)) {
             erros.prioridade = 'Prioridade inválida.';
         }
 
