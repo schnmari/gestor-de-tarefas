@@ -1,0 +1,24 @@
+{
+  "name": "gestor-de-tarefas",
+  "version": "1.0.0",
+  "description": "Sistema web de gestão de tarefas do dia a dia (to-do list) feito com **PHP**, **MySQL** e **JavaScript**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schnmari/gestor-de-tarefas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/schnmari/gestor-de-tarefas/issues"
+  },
+  "homepage": "https://github.com/schnmari/gestor-de-tarefas#readme",
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.3.0"
+  }
+}

@@ -40,6 +40,8 @@ async function excluirTarefa(tarefa) {
         'A tarefa "' + tarefa.titulo + '" será excluída permanentemente.',
         "Sim, excluir"
     );
+ 
+    // Se cancelar a função retorna false e não faz nada
     if (!confirmou) return false;
 
     const resposta = await requisicao("../php/excluirTarefa.php?id=" + tarefa.id, new FormData());
@@ -48,6 +50,7 @@ async function excluirTarefa(tarefa) {
         avisoRapido(resposta.mensagem);
         return true;
     }
+    
     alertaErro(resposta.mensagem);
     return false;
 }
