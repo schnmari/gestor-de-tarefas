@@ -1,0 +1,6 @@
+Heitor
+Funcionalidade: Excluir tarefa
+Descrição: Escreveu 2 cenários: excluir uma tarefa confirmando e cancelar a exclusão. No primeiro, o teste falhou porque a exclusão não estava implementada e a tarefa continuava na lista. Passou depois que a chamada no front-end foi ligada à remoção no back-end. No segundo, falhou porque não havia confirmação e a tarefa era excluída direto. Passou com a checagem de confirmação, que interrompe o fluxo quando o usuário cancela. Não precisou refatorar.
+
+Funcionalidade: Definir prioridade
+Descrição: Escreveu 3 cenários: criar uma tarefa com prioridade “alta”, criar sem informar a prioridade e alterar a prioridade de uma tarefa existente de “baixa” para “alta”. Os testes falharam porque o campo de prioridade não era lido no formulário, a validação não barrava o campo vazio e a edição não carregava a prioridade atual. Passaram depois de ajustar lerFormularioTarefa(), validarTarefa() e preencherFormularioTarefa(). Não precisou refatorar.

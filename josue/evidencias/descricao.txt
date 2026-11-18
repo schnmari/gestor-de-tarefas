@@ -1,0 +1,5 @@
+Funcionalidade: Criar tarefa
+Descrição: Escreveu 3 cenários em Gherkin, todos começando com o formulário de nova tarefa aberto: cadastrar uma tarefa com título, descrição e prioridade, tentar cadastrar sem título (“O título é obrigatório.”) e tentar cadastrar sem prioridade (“A prioridade é obrigatória.”). Nos cenários de erro, ele também confere se a lista continua sem nenhuma tarefa. Rodou os testes antes de existir o módulo e registrou a falha. Depois ligou os testes à função real de validação do sistema, sem duplicar regras, e os 3 cenários passaram.
+
+Funcionalidade: Filtrar por status
+Descrição: Escreveu 3 cenários a partir de uma lista com 3 tarefas, uma de cada status: “Estudar” (pendente), “Trabalhar” (em andamento) e “Descansar” (concluída). Cada cenário aplica um filtro e confere se volta só a tarefa certa e se as outras ficam de fora. Rodou os testes sem a implementação e registrou a falha. Depois ligou os testes à função Regras.filtrarPorStatus(), que compara o status exato sem alterar a lista original, e os cenários passaram.

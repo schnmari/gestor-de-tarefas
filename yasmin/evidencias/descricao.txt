@@ -1,0 +1,7 @@
+Código mínimo e sucesso: Foram integradas as funções de manipulação e validação de status no front-end, permitindo que a criação e a alteração dos estados ("Pendente", "Concluída" e "Em andamento") fossem processadas corretamente. Ao executar a suíte novamente, todos os cenários passaram com sucesso.
+
+Refatoração: O código foi revisado e considerado limpo e direto, mantendo a responsabilidade bem definida e sem duplicações, não havendo necessidade de alteração estrutural.
+
+Código mínimo e sucesso: Foram implementadas as rotinas de inversão de estado do favorito e ordenação com as favoritas no topo (Regras.favoritasNoTopo). Com isso, os testes foram aprovados integralmente com sucesso.
+
+Refatoração: O código passou por revisão de estrutura e lógica, apresentando alta coesão e reutilização de regras existentes, dispensando refatorações complexas.

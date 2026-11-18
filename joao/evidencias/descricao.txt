@@ -1,0 +1,6 @@
+João
+Funcionalidade: Categorizar itens
+Descrição: Escreveu 2 cenários: categorizar uma tarefa nova com uma categoria que já existe (“Estudos”) e criar uma nova categoria (“Academia”) durante o cadastro. No primeiro, o teste falhou (null !== 3) porque a categoria não era lida no formulário. Passou depois de adicionar a leitura de categoria_id em lerFormularioTarefa(). No segundo, falhou ('' !== '4') porque a nova categoria não ficava selecionada. Passou depois de adicionar carregarCategorias() em salvarCategoria(). Os 2 cenários e os 9 steps passaram, e não precisou refatorar.
+
+Funcionalidade: Ordenar por expiração
+Descrição: Escreveu 2 cenários: ordenar pela expiração mais próxima e pela mais distante, sempre com as tarefas sem data no final. Os testes falharam ('25/11/2026' !== '15/11/2026' e o contrário) porque as condições de ordenação não estavam ativas em aplicarFiltros(). Passaram depois de ativar essas condições em regras.js. Não precisou refatorar, porque ordenarPorExpiracao() já faz as duas ordens na mesma função.
