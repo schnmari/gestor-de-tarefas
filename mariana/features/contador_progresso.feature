@@ -10,19 +10,7 @@ Funcionalidade: Visualizar contador de progresso
     Então o progresso deve mostrar "0 de 0 tarefas concluídas"
     E o percentual de progresso deve ser "0%"
 
-  Esquema do Cenário: Calcular o progresso das tarefas concluídas
-    Dado que tenho <total> tarefas cadastradas, sendo <concluidas> concluídas
-    Quando eu abro a tela principal de tarefas
-    Então o progresso deve mostrar "<concluidas> de <total> tarefas concluídas"
-    E o percentual de progresso deve ser "<percentual>"
-
-    Exemplos:
-      | total | concluidas | percentual |
-      | 4     | 1          | 25%        |
-      | 3     | 2          | 67%        |
-      | 2     | 2          | 100%       |
-
-  Cenário: Tarefas em andamento não contam como concluídas
+  Cenário: Tarefas em andamento não contam no progresso
     Dado que minhas tarefas são:
       | titulo           | status       |
       | Fazer o trabalho | Em andamento |
@@ -39,3 +27,15 @@ Funcionalidade: Visualizar contador de progresso
     Quando eu altero o status da tarefa "Lavar a louça" para "Concluída"
     Então o progresso deve mostrar "2 de 2 tarefas concluídas"
     E o percentual de progresso deve ser "100%"
+
+  Esquema do Cenário: Calcular o percentual de progresso
+    Dado que tenho <total> tarefas cadastradas, sendo <concluidas> concluídas
+    Quando eu abro a tela principal de tarefas
+    Então o progresso deve mostrar "<concluidas> de <total> tarefas concluídas"
+    E o percentual de progresso deve ser "<percentual>"
+
+    Exemplos:
+      | total | concluidas | percentual |
+      | 4     | 1          | 25%        |
+      | 3     | 2          | 67%        |
+      | 2     | 2          | 100%       |
